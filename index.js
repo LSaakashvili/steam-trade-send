@@ -35,7 +35,7 @@ app.post('/api/send-trade', async (req, res) => {
       }
 
       // Create the trade offer
-      const offer = manager.createOffer({ tradeOfferUrl: partnerSteamID });
+      const offer = manager.createOffer( partnerSteamID );
 
       // Add items
       for (const item of itemsToGive) {
