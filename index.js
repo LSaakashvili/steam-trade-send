@@ -35,13 +35,13 @@ app.post('/api/send-trade', async (req, res) => {
       }
 
       // Create the trade offer
-      const offer = manager.createOffer( partnerSteamID );
+      const offer = manager.createOffer(partnerSteamID);
 
       // Add items
       for (const item of itemsToGive) {
         offer.addMyItem({
-          appid: 730,
-          contextid: "2",
+          appid: item.appid,
+          contextid: item.contextid,
           assetid: item.assetid
         });
       }
